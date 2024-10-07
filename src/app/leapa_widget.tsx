@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { env } from "./config/env";
+import { env } from "../../env";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export const LeapaWidget = () => {
+export function LeapaWidget() {
   const ref = useRef<HTMLElement>();
 
   useEffect(() => {
@@ -41,8 +41,8 @@ export const LeapaWidget = () => {
       source-type="card"
       button-text="Add customer"
       api-key={env.NEXT_PUBLIC_LEAPA_API_KEY}
-    ></leapa-customer>
+    />
   );
-};
+}
 
 LeapaWidget.displayName = "LeapaWidget";
