@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { env } from "./config/env";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -25,6 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async type="module" src={env.NEXT_PUBLIC_LEAPA_WIDGET_SCRIPT} />
+        <link rel="stylesheet" href={env.NEXT_PUBLIC_LEAPA_WIDGET_STYLES} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
