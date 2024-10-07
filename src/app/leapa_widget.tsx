@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { env } from "../../env";
+import { env } from "~/config/env";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
