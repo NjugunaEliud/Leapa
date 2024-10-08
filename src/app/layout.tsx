@@ -27,8 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script async type="module" src="https://widgets.leapa.co/customer.js" />
-        <link rel="stylesheet" href="https://dev.widgets.leapa.co/customer.css" />
+        <script async type="module" src={env.NEXT_PUBLIC_LEAPA_WIDGET_SCRIPT} />
+        <link rel="stylesheet" href={env.NEXT_PUBLIC_LEAPA_WIDGET_STYLES} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
