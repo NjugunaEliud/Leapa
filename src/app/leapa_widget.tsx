@@ -16,20 +16,14 @@ export function LeapaWidget() {
   const ref = useRef<HTMLElement>();
 
   useEffect(() => {
-    /**
-     * Handle success event
-     */
-    ref.current?.addEventListener("onSuccess", (event) => {
-      console.log(event, "onSuccess");
-    });
+      ref.current?.addEventListener("onSuccess", (event) => {
+        console.log(event, "onSuccess");
+      });
+      ref.current?.addEventListener("onFailure", (event) => {
+        console.error(event, "onFailure");
+      });
 
-    /**
-     * Handle on failure event
-     */
-    ref.current?.addEventListener("onFailure", (event) => {
-      console.error(event, "onFailure");
-    });
-  }, [ref]);
+  },[ref])
   return (
     <leapa-customer
       ref={ref}
