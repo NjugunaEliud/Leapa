@@ -27,8 +27,9 @@ export function LeapaWidget() {
   return (
     <leapa-customer
       ref={ref}
-      mode="add"
+      mode="charge"
       currency="USD"
+      amount="1"
       description="Payment demo"
       first-name="true"
       last-name="true"
