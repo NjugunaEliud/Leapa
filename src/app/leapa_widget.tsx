@@ -14,23 +14,20 @@ declare global {
 
 export function LeapaWidget() {
   const ref = useRef<HTMLElement>();
-
   useEffect(() => {
-      ref.current?.addEventListener("onSuccess", (event) => {
-        console.log(event, "onSuccess");
-      });
-      ref.current?.addEventListener("onFailure", (event) => {
-        console.error(event, "onFailure");
-      });
+    ref.current?.addEventListener("onSuccess", (event) => {
+      console.log(event, "onSuccess");
+    });
+    ref.current?.addEventListener("onFailure", (event) => {
+      console.error(event, "onFailure");
+    });
 
-  },[ref])
+},[ref])
   return (
-
     <leapa-customer
       ref={ref}
-      mode="charge"
+      mode="add"
       currency="USD"
-      amount="1"
       description="Payment demo"
       first-name="true"
       last-name="true"
